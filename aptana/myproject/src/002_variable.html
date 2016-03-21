@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>002_variable</title>
+		<meta name="author" content="charles" />
+		<!-- Date: 2016-03-08 -->
+		<script type="text/javascript">
+			var a = 3;  //全局变量 1.在方法外部 2.在方法内部但是没有使用var 声明的 但须先执行该函数才能定义全局变量
+			
+			function test() {
+				var a =2;
+				alert(a);//局部变量
+			}
+			//基本数据类型 Number Boolean String Undefined Null
+			//Number 整数和小数   NaN不是一个数字 infinity正无穷
+			// alert(1/0);
+			var a1 = 070;//八进制
+			var a2 = 0xA;//十六进制
+			alert(a2);
+			
+			//undefined  声明未赋值
+			
+			
+			//引用数据类型Object
+			
+			//typeof 操作符 用于判断数据类型
+			//null 表示一个空对象的引用
+			var na = 2;
+			alert(typeof na);
+			
+			
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
+

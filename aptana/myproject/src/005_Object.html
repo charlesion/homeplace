@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>005_Object</title>
+		<meta name="author" content="charles" />
+		<!-- Date: 2016-03-09 -->
+		<script type="text/javascript">
+			//Object所有类的基类
+			//实例化对象
+			// var obj = new Object();
+			var obj = {};
+			//为对象设置属性和方法值
+			obj.name = "charles";
+			obj.age = 20;
+			obj.say = function(){
+				alert(this.name+","+this.age);
+			};
+			/*//访问对象的属性和方法
+			alert(obj.name);
+			alert(obj.age);
+			obj.say();
+			//delete 删除对象的属性和方法
+			delete obj.age;
+			alert(obj.age);*/
+			
+			//遍历js对象 for in
+			/*for(var attr in obj){
+				alert(attr);//属性 方法指导
+				alert(obj[attr]);
+			}*/
+			//constructor 保存对象的创建函数
+			//alert(obj.constructor);
+			//hasOwnProperty(propertyName) 用于检测指定属性名在实例对象中是否存在
+			//alert(obj.hasOwnProperty('say'));
+			//isPrototypeOf 检测原型
+			//propertyIsEnumerable
+			//toLocalString toString valueOf
+			
+		</script>
+		
+		
+		
+	</head>
+	<body>
+
+	</body>
+</html>
+
