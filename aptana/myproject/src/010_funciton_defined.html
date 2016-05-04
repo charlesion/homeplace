@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>010_funciton_defined</title>
+		<meta name="author" content="charles" />
+		<!-- Date: 2016-03-23 -->
+		<script type="text/javascript">
+			//定义函数的方式 3种
+			//function 语句  优先解析 静态 有名 语句 函数作用域
+			function test(){ 
+				
+			}
+			
+			//函数直接量 ECMAScript 顺序解析 静态 匿名 表达式 函数作用域  静态效率高内存占用高
+			var test1  = function(){
+				
+			};
+			
+			//构造函数 顺序解析 动态 匿名 表达式 顶级作用域  动态效率低内存占用低
+			var test3 = new Function("a","b","return a+b;");//参数1,参数2,函数体
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
+

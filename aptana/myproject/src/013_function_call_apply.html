@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>013_function_call_apply</title>
+		<meta name="author" content="charles" />
+		<!-- Date: 2016-03-28 -->
+		<script type="text/javascript">
+			//call apply 用于绑定参数到函数中执行
+			function add(a, b){
+				return a+b;
+			}
+			
+			function tCall(a, b){
+				return add.call(this, a, b);
+			}
+			
+			function tApply(a, b){
+				return add.apply(this, [a,b]);
+			}
+			
+			//alert(tCall(10, 5));
+			//alert(tApply(20, 30));
+			
+			
+			var color = "blue";
+			var blackObj = {color:"black"};
+			function showColor(){
+				alert(this.color);
+			}
+			//类似重载功能
+			//showColor.call(this);
+			//showColor.call(blackObj);
+			
+			
+			//call方法的模拟实现
+			function testCall(x, y){
+				return x+y;
+			}
+			
+			function Obj(x, y){
+				this.x = x;
+				this.y = y;
+			}
+			
+			
+			var o = new Obj(10, 20);
+			o.method = testCall;
+			alert(o.method(o.x, o.y));
+			delete method;
+			
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
+

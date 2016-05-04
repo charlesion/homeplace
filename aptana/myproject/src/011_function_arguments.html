@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>011_function_arguments</title>
+		<meta name="author" content="charles" />
+		<!-- Date: 2016-03-28 -->
+		<script type="text/javascript">
+			//函数的参数
+			
+			function testArgu(a, b, c, d){//形参
+				testArgu.length;//函数的形参个数
+				//arguments 对象拥有函数的实参
+				arguments.length;//实参的个数
+				arguments[0];//第一次实参
+				arguments.callee==testArgu;//函数本身
+			}
+			
+			testArgu(10, 20);
+			testArgu(10, 20, 30, 40);
+			
+			//arguments.callee 用法
+			function mutiply(num){
+				if(num<=1){
+					return 1;
+				}else{
+					return num*arguments.callee(num-1);
+				}
+			}
+			
+			alert(mutiply(5));
+			
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
+

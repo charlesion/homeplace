@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>008_objectglobal</title>
+		<meta name="author" content="charles" />
+		<script type="text/javascript">
+			//global 全局的 终极的对象 （无形的不存在的）
+			//encodeURI encodeURIComponent
+			var uri = 'http://wwww.baidu.com cn';
+			//encodeURI 正常的 () :  // )不会编码
+			var str1 = encodeURI(uri);
+			// alert(str1);
+			//encodeURIComponent  任何不是标准的 都会编码 : // 都会编码
+			var str2 = encodeURIComponent(uri);
+			// alert(str2);
+			
+			//decodeURI decodeURIComponent  对应上面的 解码操作
+			// alert(decodeURI(str2));
+			// alert(decodeURIComponent(str2));
+			
+			//eval parseInt parseFloat isNaN escape unescape
+			//eval 无形的javascript 解析器
+			var s1 = "var a=20; var b=30;";
+			eval(s1);
+			// alert(a+b);
+			//parseInt parseFloat 转化为 number类型
+			
+			//escape unescape uri 编码 和解码
+			
+			//isNaN  判断是否不是number
+			//在js中 NaN不等于NaN  
+			
+			
+			//Math 对象 Math.random(); 0-1之间随机数
+			// alert(Math.random());
+			
+			//Date 对象
+			
+			var date = new Date();
+			var year = date.getFullYear();
+			var month = date.getMonth()+1;
+			var day = date.getDate();
+			var week = date.getDay();
+			var hours = date.getHours();
+			var minutes = date.getMinutes();
+			var seconds = date.getSeconds();
+			document.write("today is " + year+"-"+month+"-"+day+ " "+ hours +":"+minutes+":" +seconds +"week"+week);
+			
+			
+		</script>
+		<!-- Date: 2016-03-21 -->
+	</head>
+	<body>
+
+	</body>
+</html>
+
